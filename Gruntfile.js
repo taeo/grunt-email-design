@@ -259,6 +259,29 @@ module.exports = function(grunt) {
 
 
 
+        // BrowserSync
+        browserSync: {
+            dev: {
+                bsFiles: {
+                    src : [
+                        '<%= paths.dist %>*.html'
+                    ]
+                },
+                options: {
+                    watchTask: true,
+                    //server: './app'
+                    server: {
+                      baseDir: "./dist/"
+                    }
+                }
+            }
+        },
+
+
+
+
+
+
         // Send your email template to Litmus for testing
         // grunt litmus --template=transaction.html
         litmus: {
@@ -341,11 +364,8 @@ module.exports = function(grunt) {
 
     // Launch the express server and start watching
     // NOTE: The server will not stay running if the grunt watch task is not active
-    grunt.registerTask('serve', ['default', 'express', 'open', 'watch']);
-
-
-    // Launch the express server and start watching
-    // NOTE: The server will not stay running if the grunt watch task is not active
     grunt.registerTask('serve', ['default', 'autoprefixer:preview', 'express', 'open', 'watch']);
+
+    grunt.registerTask('shizam', ['browserSync', 'watch']);
 
 };
