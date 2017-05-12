@@ -36,3 +36,7 @@ serve:
   - 'express'
   - 'open'
   - 'watch'
+
+specific:
+  - 'assemble'
+  - 'juice'
