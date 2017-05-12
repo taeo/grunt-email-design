@@ -52,8 +52,8 @@
 
     if (!v)
       return;
-    
-    $('iframe').attr('src', v + '?t=' + ms);
+
+    $('iframe').attr('src', '/frame?template=' + v);
     document.location.hash = 'template:' + v;
 
   });
