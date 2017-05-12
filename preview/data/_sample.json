@@ -1,0 +1,14 @@
+{
+  "user": {
+    "first_name": "Joe",
+    "last_name": "Buyer",
+    "email": "joe@example.com"
+  },
+  "sample": {
+    "todos": [
+      "Brush your teeth",
+      "Take a few moments to stretch",
+      "Say something positive to someone"
+    ]
+  }
+}
