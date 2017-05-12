@@ -1,0 +1,46 @@
+---
+layout: default.hbs
+subject: Sample Template (Liquid)
+---
+<span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
+<div class="header">
+  <table>
+    <tr>
+      <td class="align-center">
+        <a href="http://www.mailgun.com"><img src="../src/img/mailgun.png" height="50" alt="Mailgun"></a>
+      </td>
+    </tr>
+  </table>
+</div>
+<table class="main">
+  <tr>
+    <td class="wrapper">
+      <table>
+        <tr>
+          <td>
+            <h1>Sample Template (Liquid)</h1>
+            <p>Hey \{{user.first_name}},</p>
+            <p>This template is rendered using liquid with sample data. Check the source of <code>/dist/_sample.liquid</code> or edit <code>/preview/_sample.json</code> to modify the sample data.</p>
+            <p>Here's three, dynamic things you should do daily:</p>
+            <ol>
+              {% for todo in sample.todos %}
+                <li>\{{ todo }}</li>
+              {% endfor %}
+            </ol>
+            {{> divider }}
+            <p>Thanks for using our <a href="https://github.com/leemunroe/grunt-email-workflow">Email Workflow</a>. Happy Coding.</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<div class="footer">
+  <table>
+    <tr>
+      <td class="align-center">
+        <p>{{> follow_lee }}</p>
+      </td>
+    </tr>
+  </table>
+</div>
