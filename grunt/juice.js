@@ -13,7 +13,7 @@ module.exports = {
     },
     files: [{
       expand: true,
-      src: ['<%= paths.dist %>/*.html'],
+      src: ['<%= paths.dist %>/*.*'],
       dest: ''
     }]
   }
