@@ -6,8 +6,12 @@ module.exports = function(grunt) {
 
   return {
     pieces: {
-      files: ['<%= paths.src %>/css/scss/*','<%= paths.src %>/layouts/*','<%= paths.src %>/partials/**/*','<%= paths.src %>/data/*'],
+      files: ['<%= paths.src %>/layouts/*','<%= paths.src %>/partials/**/*','<%= paths.src %>/data/*'],
       tasks: ['default']
+    },
+    styles: {
+      files: ['<%= paths.src %>/css/scss/*'],
+      tasks: ['sass:dist', 'templates']
     },
     emails: {
       files: ['<%= paths.src %>/emails/' + files],
