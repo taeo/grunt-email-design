@@ -28,11 +28,27 @@ s3upload:
   - 'cdn:aws_s3'
 
 # Launch the express server and start watching
-# $ grunt serve
-serve:
-  - 'default'
+# $ grunt preview
+preview:
   - 'sass:preview'
   - 'autoprefixer:preview'
   - 'express'
   - 'open'
   - 'watch'
+
+# Styles only
+# $ grunt styles
+styles:
+  - 'sass:dist'
+
+# Images only
+# $ grunt images
+images:
+  - 'imagemin'
+
+# Templates only
+# $ grunt templates
+templates:
+  - 'assemble'
+  - 'juice'
+  - 'replace:src_images'
